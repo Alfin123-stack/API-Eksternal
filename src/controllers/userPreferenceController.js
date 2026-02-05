@@ -48,9 +48,9 @@ export const getUserPreferences = async (req, res, next) => {
       throw error;
     }
 
-    const preferences = dummyUserPreferences[userId];
+    const preference = dummyUserPreferences[userId];
 
-    if (!preferences) {
+    if (!preference) {
       const error = new Error(`Preferences for user ${userId} not found`);
       error.status = 404;
       throw error;
@@ -61,7 +61,7 @@ export const getUserPreferences = async (req, res, next) => {
       message: "User preferences retrieved successfully",
       data: {
         userId,
-        preferences,
+        preference,
       },
     });
   } catch (err) {
