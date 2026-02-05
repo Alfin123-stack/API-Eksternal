@@ -1,0 +1,42 @@
+{
+  "name": "backend-perusahaan",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "build": "echo \"No build step required\"",
+    "health": "curl http://localhost:4000/health",
+    "swagger": "node scripts/generate-swagger.js"
+  },
+  "keywords": ["express", "external-api", "backend", "company-api"],
+  "author": "Backend Team",
+  "license": "MIT",
+  "description": "External API service for tutorial and user preference data",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@upstash/redis": "^1.36.2",
+    "axios": "^1.13.4",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.2",
+    "serverless-http": "^4.0.0",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.30.0",
+    "globals": "^17.3.0",
+    "nodemon": "^3.1.11",
+    "prettier": "^3.3.3"
+  }
+}
